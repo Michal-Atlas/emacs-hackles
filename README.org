@@ -4,7 +4,7 @@ This is just a lightly tweaked version of [[https://github.com/vibhavp/emacs-xkc
 to read another comic.
 I did very little work here, but learned a ton and now I can read a splendid old web comic.
 
-Implementation of a [[https://hackles.org][hackles]] reader for GNU Emacs.
+Implementation of a [[https://hackles.org/index.html][hackles]] reader for GNU Emacs.
 
 * Viewing comics:
   + ~hackles-get~ loads a user-specific xkcd.
