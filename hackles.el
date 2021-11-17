@@ -51,7 +51,7 @@
 
 (defvar hackles-alt nil)
 (defvar hackles-cur nil)
-(defvar hackles-latest 0)
+(defvar hackles-last 364)
 
 (defgroup hackles nil
   "A hackles reader for Emacs"
@@ -88,7 +88,6 @@ If the image is a gif, animate it."
 (defun hackles-get (num)
   "Get the hackles number NUM."
   (interactive "nEnter comic number: ")
-  (hackles-update-latest)
   (get-buffer-create "*hackles*")
   (switch-to-buffer "*hackles*")
   (hackles-mode)
@@ -124,19 +123,13 @@ If the image is a gif, animate it."
     (hackles-get num)))
 
 ;;;###autoload
-(defun hackles-get-latest ()
-  "Get the latest hackles."
+(defun hackles-get-last ()
+  "Get the last hackles."
   (interactive)
   (hackles-get 364))
 
 ;;;###autoload
-(defalias 'hackles 'hackles-get-latest)
-
-(defun hackles-get-latest-cached ()
-  "Get the latest cached hackles."
-  (interactive)
-  (hackles-update-latest)
-  (hackles-get hackles-latest))
+(defalias 'hackles 'hackles-get-last)
 
 ;; Not applicable until I find a way to parse it from HTML
 ;;(defun hackles-alt-text ()
