@@ -46,11 +46,8 @@
 
 (define-key hackles-mode-map (kbd "<right>") 'hackles-next)
 (define-key hackles-mode-map (kbd "<left>") 'hackles-prev)
-(define-key hackles-mode-map (kbd "r") 'hackles-rand)
-(define-key hackles-mode-map (kbd "t") 'hackles-alt-text)
 (define-key hackles-mode-map (kbd "q") 'hackles-kill-buffer)
 (define-key hackles-mode-map (kbd "o") 'hackles-open-browser)
-(define-key hackles-mode-map (kbd "e") 'hackles-open-explanation-browser)
 
 (defvar hackles-alt nil)
 (defvar hackles-cur nil)
