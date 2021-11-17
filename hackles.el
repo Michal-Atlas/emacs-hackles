@@ -67,12 +67,6 @@
   :group 'hackles
   :type 'directory)
 
-(defcustom hackles-cache-latest (concat hackles-cache-dir "latest")
-  "File to store the latest cached hackles number in.
-Should preferably be located in `hackles-cache-dir'."
-  :group 'hackles
-  :type 'file)
-
 (defun hackles-download (url num)
   "Download the image linked by URL to NUM.  If NUM arleady exists, do nothing."
   (let ((name (format "%s%s.%s" hackles-cache-dir (number-to-string num)
@@ -120,8 +114,8 @@ If the image is a gif, animate it."
   "Get next hackles."
   (interactive "p")
   (let ((num (+ hackles-cur arg)))
-    (when (> num hackles-latest)
-      (setq num hackles-latest))
+    (when (> num 364)
+      (setq num 364))
     (hackles-get num)))
 
 (defun hackles-prev (arg)
