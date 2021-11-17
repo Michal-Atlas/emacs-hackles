@@ -1,56 +1,29 @@
-#+TITLE: emacs-xkcd 
-#+STARTUP: inlineimages
+#+TITLE: emacs-hackles
 
-[[https://travis-ci.org/vibhavp/emacs-xkcd][https://travis-ci.org/vibhavp/emacs-xkcd.png]]
+This is just a lightly tweaked version of [[https://github.com/vibhavp/emacs-xkcd][emacs-xkcd]]
+to read another comic.
+I did very little work here, but learned a ton and now I can read a splendid old web comic.
 
-[[http://melpa.org/#/xkcd][file:http://melpa.org/packages/xkcd-badge.svg]]
-
-Implementation of an [[https://xkcd.com][xkcd]] reader for GNU Emacs.
-
-* Installation
-** Via package.el
-   emacs-xkcd is available on [[http://melpa.milkbox.net][MELPA]] and [[https://marmalade-repo.org/][Marmalade]]. Just add any
-   of these to your package archives, and install the package with 
-   ~M-x package-install xkcd~.
-** Via el-get
-   Emacs xkcd can also be installed using [[https://github.com/dimitri/el-get][el-get]]. To do so, run
-   ~M-x el-get-install xkcd~
-** Via Git
-   Clone this repo to a desired location, add the directory to your load path:
-   #+BEGIN_SRC emacs-lisp
-(add-to-list 'load-path (expand-file-name "/path/to/emacs-xkcd"))
-(require 'xkcd)
-   #+END_SRC
-   
-* Screenshot:
-  [[./images/screenshot.png]]
+Implementation of a [[https://hackles.org][hackles]] reader for GNU Emacs.
 
 * Viewing comics:
-  + ~xkcd-get~ loads a user-specific xkcd.
-  Files are cached (for later offline viewing) by default to =~/.emacs.d/xkcd/=.
-  This can be changed by changing ~xkcd-cache-dir~ in emacs-xkcd's customize menu. 
-  (~customize-group xkcd~)
-  
-  + ~xkcd~ loads the latest xkcd.
+  + ~hackles-get~ loads a user-specific xkcd.
+  Files are cached (for later offline viewing) by default to =~/.emacs.d/hackles/=.
+  This can be changed by changing ~hackles-cache-dir~ in emacs-hackles's customize menu.
+  (~customize-group hackles~)
 
 * Customization
-  
-  emacs-xkcd can be customized with ~M-x customize-group xkcd~.
-  | Option              | Use                                                  | Default value            |
-  |---------------------+------------------------------------------------------+--------------------------|
-  | ~xkcd-cache-dir~    | Directory where images and json files are cached     | =~/.emacs.d/xkcd/=       |
-  | ~xkcd-cache-latest~ | File where the latest cached xkcd's number is stored | =~/.emacs.d/xkcd/latest= |
+
+  emacs-hackles can be customized with ~M-x customize-group hackles~.
+  | Option                 | Use                                                     | Default value               |
+  |------------------------+---------------------------------------------------------+-----------------------------|
+  | ~hackles-cache-dir~    | Directory where images and json files are cached        | =~/.emacs.d/hackles/=       |
+  | ~hackles-cache-latest~ | File where the latest cached hackles's number is stored | =~/.emacs.d/hackles/latest= |
 
 * Keybindings:
-  
-  | Keybinding | Use                             | Function        |
-  |------------+---------------------------------+-----------------|
-  | =r=        | Load a random xkcd              | (xkcd-rand)     |
-  | =t=        | Show alt-text in the minibuffer | (xkcd-alt-text) |
-  | =<right>=  | Load next xkcd                  | (xkcd-next)     |
-  | =<left>=   | Loads previous xkcd             | (xkcd-prev)     |
 
- 
-* Stuff yet to be added:
-** TODO View title in user-defined faces.
-** TODO Handle links to xkcd in Emacs with xkcd-get.
+  | Keybinding | Use                    | Function       |
+  |------------+------------------------+----------------|
+  | =<right>=  | Load next hackles      | (hackles-next) |
+  | =<left>=   | Loads previous hackles | (hackles-prev) |
+
