@@ -1,8 +1,8 @@
 ;;; hackles.el --- View hackles from Emacs
 
-;;; Copyright (C) 2014 Vibhav Pant <vibhavp@gmail.com>
+;;; Original Copyright (C) 2014 Vibhav Pant <vibhavp@gmail.com>
 
-;; Version: 1.0
+;; Version: 1.1
 ;; Package-Requires: ((json "1.3"))
 ;; Keywords: hackles webcomic
 
